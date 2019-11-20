@@ -1,6 +1,10 @@
 pipeline {
     //agent none
-	agent any
+    agent any
+    tools {
+        maven 'LocalMaven' 
+        java 'LocalJDK8'
+    } 	
     stages {	
 	    stage('Non-Parallel Stage') {
           	steps {
